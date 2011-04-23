@@ -55,6 +55,10 @@ $("#text1").keydown(function(e) {
      	e.preventDefault();
 		return false;
   	}
+
+	if (e.keyCode == "190") {
+		$("#text2").append(".");
+	}
 });
 
 $("#text2").keydown(function(e) {
@@ -85,6 +89,10 @@ $("#text2").keydown(function(e) {
      	e.preventDefault();
 		return false;
   	}
+
+	if (e.keyCode == "190") {
+		$("#text2").append(".");
+	}
   
 });
 </script>
