@@ -8,16 +8,22 @@ body {
 	margin:20px auto;
 	text-align:center;
 }
+
 textarea {
 	width:80%;
 	max-width:80%;
     height:120px;
     font-family: helvetica;
-    font-size:15px;
+    font-size:12px;
+}
+
+h1 {
+    font-family:helvetica;    
 }
 </style>
 </head>
 <body>
+  <h1>Cypher</h1>
   <textarea  id="text1" placeholder="Plain Text"></textarea>
   <br>
   <textarea id="text2" placeholder="Cypher Text"></textarea>
@@ -26,7 +32,7 @@ textarea {
 
 $("#text1").keydown(function(e) {
  
-  	var a1 = new Array("H","Q","W","L","O","J","V","N","Y","M","V","P","R","X","C","Z","A","D","K","G","B","F","S","T","I","E");
+  	var array1 = new Array("h","q","w","l","o","j","v","n","y","m","v","p","r","x","c","z","a","d","k","g","b","f","s","t","i","e");
 
 	if(e.keyCode == "8"){
  		$("#text2").html("");
@@ -37,7 +43,7 @@ $("#text1").keydown(function(e) {
  
 	for (var i=65; i <= 90; i++){
 		if(e.keyCode === i ){
-	  	$("#text2").append(a1[i-65]);
+	  	$("#text2").append(array1[i-65]);
 		}
   	}
    	for (var i=48; i <= 57; i++){
@@ -60,7 +66,7 @@ $("#text1").keydown(function(e) {
 
 $("#text2").keydown(function(e) {
   
-	var a2 = new Array("q","v","o","r","z","v","t","a","y","f","s","d","j","h","e","l","b","m","w","x","k","c","n","i","p");
+	var array2 = new Array("q","v","o","r","z","v","t","a","y","f","s","d","j","h","e","l","b","m","w","x","k","c","n","i","p");
   	if(e.keyCode == "8"){
      	$("#text1").html("");
 		$(this).html("");
@@ -69,7 +75,7 @@ $("#text2").keydown(function(e) {
     }
   	for (var i=65; i <= 90; i++){
 		if(e.keyCode === i ){
-	  	$("#text1").append(a2[i-65]);
+	  	$("#text1").append(array2[i-65]);
 		}
   	}
 	for (var i=48; i <= 57; i++){
